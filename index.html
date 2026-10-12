@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>BioPaster | Biomedical Research Agent with Small Local Models</title>
+  <meta name="description" content="BioPaster is an open-source biomedical research CLI agent for small local language models. Search literature, inspect data, execute code, and keep notebook outputs.">
+  <meta name="robots" content="index,follow,max-image-preview:large">
+  <link rel="canonical" href="https://n1yan.github.io/BioPaster.documentation/">
+  <link rel="alternate" hreflang="en" href="https://n1yan.github.io/BioPaster.documentation/">
+  <link rel="alternate" hreflang="zh-CN" href="https://n1yan.github.io/BioPaster.documentation/zh/">
+  <link rel="alternate" hreflang="x-default" href="https://n1yan.github.io/BioPaster.documentation/">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="BioPaster">
+  <meta property="og:title" content="BioPaster: biomedical research with small local models">
+  <meta property="og:description" content="Connect literature evidence, analysis code, and notebook outputs in an open-source research CLI.">
+  <meta property="og:url" content="https://n1yan.github.io/BioPaster.documentation/">
+  <meta property="og:image" content="https://n1yan.github.io/BioPaster.documentation/assets/social-preview.png">
+  <meta property="og:image:alt" content="BioPaster: biomedical research with small local models">
+  <meta property="og:locale" content="en_US">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="stylesheet" href="assets/style.css">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <script src="assets/site.js" defer></script>
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"SoftwareSourceCode","name":"BioPaster","description":"An open-source biomedical research CLI agent supporting small local language models, literature retrieval, code execution, and notebooks.","url":"https://n1yan.github.io/BioPaster.documentation/","codeRepository":"https://github.com/N1yan/BioPaster","programmingLanguage":"Python","runtimePlatform":"Python 3.12+","license":"https://github.com/N1yan/BioPaster/blob/main/LICENSE","inLanguage":"en"}</script>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="wrap nav">
+  <a class="brand" href="./" aria-label="BioPaster home">Bio<span>Paster</span></a>
+  <nav class="nav-links" aria-label="Main navigation">
+    <a class="desktop" href="#workflow">Workflow</a><a class="desktop" href="#start">Get started</a>
+    <a href="https://github.com/N1yan/BioPaster">GitHub ↗</a>
+    <a class="language" href="zh/" lang="zh-CN" hreflang="zh-CN">中文</a>
+  </nav>
+</header>
+<main id="main" class="wrap">
+  <section class="hero" aria-labelledby="hero-title">
+    <p class="eyebrow">Open-source biomedical research agent</p>
+    <h1 id="hero-title">Small models.<br><span>Real research tools.</span></h1>
+    <p class="lead">Run a research agent locally. Connect literature evidence, analysis code, and notebook outputs on your own machine.</p>
+    <div class="actions"><a class="button" href="#start">Get started</a><a class="button secondary" href="https://github.com/N1yan/BioPaster">View on GitHub ↗</a></div>
+  </section>
+  <ol class="workflow" aria-label="Research workflow">
+    <li><span class="symbol" aria-hidden="true">↗</span><div><strong>Find the evidence</strong><p>Search papers and read source materials.</p></div></li>
+    <li><span class="symbol" aria-hidden="true">⌘</span><div><strong>Work with the data</strong><p>Inspect files and execute analysis code.</p></div></li>
+    <li><span class="symbol" aria-hidden="true">✓</span><div><strong>Review the outputs</strong><p>Keep code and results in a notebook.</p></div></li>
+  </ol>
+  <section class="content" id="workflow">
+    <h2>A research workflow you can inspect.</h2>
+    <p class="intro">BioPaster gives local language models tools to work with biomedical research materials. Use natural language in the terminal, then inspect the sources, code, and files behind the answer.</p>
+    <div class="features">
+      <article><h3>Literature and source evidence</h3><p>Search papers and websites, retrieve accessible full text, and copy relevant material into evidence files for review.</p></article>
+      <article><h3>Code with notebook outputs</h3><p>Inspect workspace data, adapt analysis code, and execute it through configured Jupyter kernels. Review code and outputs in the notebook.</p></article>
+      <article><h3>Small models, local inference</h3><p>Connect a tool-capable local model through llama.cpp. Local inference avoids cloud model fees per token; hardware and connected services have their own costs.</p></article>
+      <article><h3>Skills, tasks, and continuity</h3><p>Load workflow instructions on demand, track task dependencies, resume saved conversations, and connect retrieval services through MCP.</p></article>
+    </div>
+  </section>
+  <section class="content evidence" id="evaluation">
+    <div><h2>Look at the evidence.</h2><p class="intro">The repository reports an evaluation on 20 biomedical questions from ScholarQABench, using Bonsai 2 27B in BioPaster and Claude Code.</p><p class="small">Citation recall and precision measure support from cited papers. This is a small, specific evaluation, not a guarantee for other models or scientific tasks.</p><a href="https://github.com/N1yan/BioPaster#scholarqabench-biomedical-subset">Read the evaluation and metric definitions ↗</a></div>
+    <figure><a href="assets/benchmark.png"><img class="plot" src="assets/benchmark.png" width="733" height="644" loading="lazy" alt="Repository chart comparing citation recall and precision for BioPaster and Claude Code on 20 biomedical ScholarQABench questions."></a><figcaption>Published repository figure. Open the image to inspect it at full size.</figcaption></figure>
+  </section>
+  <section class="content start" id="start">
+    <div><h2>Start on your machine.</h2><p class="intro">Install BioPaster, start a tool-capable model server, and connect it in your configuration.</p><p class="small">Python 3.12+ is required. These commands use Bash on Linux. Model memory requirements depend on model size, quantization, and context length.</p><p><a href="https://github.com/N1yan/BioPaster/blob/main/docs/local-model.md">Local model setup ↗</a></p><p><a href="https://github.com/N1yan/BioPaster#run-locally">Complete installation guide ↗</a></p></div>
+    <div class="codebox"><div class="codebar"><span>Install the CLI</span><button class="copy" data-copy="install-command" hidden aria-live="polite">Copy</button></div><pre><code id="install-command">git clone https://github.com/N1yan/BioPaster.git
+cd BioPaster
+python3.12 -m venv .venv
+source .venv/bin/activate
+python -m pip install .
+biopaster --version</code></pre></div>
+  </section>
+  <section class="content" id="resources">
+    <h2>Go from setup to a useful question.</h2>
+    <p class="intro">Follow the guides or explore the retrieval examples. Start with a small task whose output you can check.</p>
+    <div class="resources">
+      <a class="resource" href="https://github.com/N1yan/BioPaster/blob/main/docs/local-model.md"><strong>Local model guide <span aria-hidden="true">↗</span></strong><p>Download a model, start llama.cpp, and test a tool call.</p></a>
+      <a class="resource" href="https://github.com/N1yan/BioPaster/blob/main/docs/model-selection.md"><strong>Model configuration <span aria-hidden="true">↗</span></strong><p>Configure connections and switch models with /model.</p></a>
+      <a class="resource" href="https://github.com/N1yan/BioPaster/tree/main/examples/chroma_mcp"><strong>Chroma retrieval example <span aria-hidden="true">↗</span></strong><p>Connect a document retrieval service through MCP.</p></a>
+      <a class="resource" href="https://github.com/N1yan/BioPaster/tree/main/examples/neo4j_mcp"><strong>Neo4j knowledge graph example <span aria-hidden="true">↗</span></strong><p>Explore graph-backed retrieval for research questions.</p></a>
+    </div>
+  </section>
+  <section class="content faq" id="faq">
+    <h2>A few practical questions.</h2>
+    <details><summary>What is BioPaster?</summary><p>BioPaster is an open-source command-line AI agent for biomedical research. It connects language models to literature, local files, code execution, and Jupyter notebooks. It is available as a Python project on GitHub.</p></details>
+    <details><summary>Can it run with a small local model?</summary><p>Yes. BioPaster has been tested with a local 9B model for streaming, tool calling, and conversation titles. Choose a model with tool-calling support and a server compatible with the Anthropic Messages API. Task quality depends on the model and the problem.</p></details>
+    <details><summary>Does local inference mean everything stays offline?</summary><p>The model can run on your machine without a cloud inference provider. Literature search, downloads, and external MCP services may still use the network. Review which tools and services you enable.</p></details>
+    <details><summary>What can I review after an analysis?</summary><p>You can inspect retained notebook code and outputs, source evidence files, and saved conversations. Reproducing a result also requires the original input data and a compatible software environment; a notebook alone is not a guarantee.</p></details>
+  </section>
+</main>
+<footer class="wrap"><span>BioPaster · Open source under the MIT license</span><div><a href="https://github.com/N1yan/BioPaster/issues">Issues</a><a href="https://github.com/N1yan/BioPaster/blob/main/LICENSE">License</a><a href="zh/" lang="zh-CN">中文</a></div></footer>
+</body>
+</html>

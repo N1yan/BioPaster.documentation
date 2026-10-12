@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>BioPaster | 支持本地小参数模型的生物科研 AI Agent</title>
+  <meta name="description" content="BioPaster 是支持本地小参数语言模型的开源生物科研命令行 AI Agent。检索文献、检查数据、执行分析代码，并将代码与结果保存在 Notebook 中供检查。">
+  <meta name="robots" content="index,follow,max-image-preview:large">
+  <link rel="canonical" href="https://n1yan.github.io/BioPaster.documentation/zh/">
+  <link rel="alternate" hreflang="en" href="https://n1yan.github.io/BioPaster.documentation/">
+  <link rel="alternate" hreflang="zh-CN" href="https://n1yan.github.io/BioPaster.documentation/zh/">
+  <link rel="alternate" hreflang="x-default" href="https://n1yan.github.io/BioPaster.documentation/">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="BioPaster">
+  <meta property="og:title" content="BioPaster：用本地小模型开展生物科研">
+  <meta property="og:description" content="串联文献证据、分析代码和 Notebook 结果的开源科研命令行 Agent。">
+  <meta property="og:url" content="https://n1yan.github.io/BioPaster.documentation/zh/">
+  <meta property="og:image" content="https://n1yan.github.io/BioPaster.documentation/assets/social-preview.png">
+  <meta property="og:image:alt" content="BioPaster: biomedical research with small local models">
+  <meta property="og:locale" content="zh_CN">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="stylesheet" href="../assets/style.css">
+  <link rel="icon" href="../assets/favicon.svg" type="image/svg+xml">
+  <script src="../assets/site.js" defer></script>
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"SoftwareSourceCode","name":"BioPaster","description":"支持本地小参数模型的开源生物科研命令行 AI Agent，提供文献检索、代码执行和 Notebook 记录。","url":"https://n1yan.github.io/BioPaster.documentation/zh/","codeRepository":"https://github.com/N1yan/BioPaster","programmingLanguage":"Python","runtimePlatform":"Python 3.12+","license":"https://github.com/N1yan/BioPaster/blob/main/LICENSE","inLanguage":"zh-CN"}</script>
+</head>
+<body>
+<a class="skip" href="#main">跳转到正文</a>
+<header class="wrap nav">
+  <a class="brand" href="./" aria-label="BioPaster 首页">Bio<span>Paster</span></a>
+  <nav class="nav-links" aria-label="主导航"><a class="desktop" href="#workflow">工作流程</a><a class="desktop" href="#start">开始使用</a><a href="https://github.com/N1yan/BioPaster">GitHub ↗</a><a class="language" href="../" lang="en" hreflang="en">English</a></nav>
+</header>
+<main id="main" class="wrap">
+  <section class="hero" aria-labelledby="hero-title">
+    <p class="eyebrow">开源生物科研 AI Agent</p>
+    <h1 id="hero-title">本地小模型，<br><span>接上科研工具。</span></h1>
+    <p class="lead">在自己的电脑上运行科研 Agent，串联文献证据、分析代码与 Notebook 结果。</p>
+    <div class="actions"><a class="button" href="#start">开始使用</a><a class="button secondary" href="https://github.com/N1yan/BioPaster">查看 GitHub ↗</a></div>
+  </section>
+  <ol class="workflow" aria-label="科研工作流程">
+    <li><span class="symbol" aria-hidden="true">↗</span><div><strong>寻找文献证据</strong><p>检索论文，阅读原始来源。</p></div></li>
+    <li><span class="symbol" aria-hidden="true">⌘</span><div><strong>处理研究数据</strong><p>检查文件，执行分析代码。</p></div></li>
+    <li><span class="symbol" aria-hidden="true">✓</span><div><strong>检查分析产物</strong><p>在 Notebook 中保留代码与结果。</p></div></li>
+  </ol>
+  <section class="content" id="workflow">
+    <h2>每一步，都有可检查的产物。</h2>
+    <p class="intro">BioPaster 为本地语言模型提供处理生物医学研究资料的工具。通过终端中的自然语言发起任务，再检查回答背后的来源、代码和文件。</p>
+    <div class="features">
+      <article><h3>文献与原始证据</h3><p>检索论文和网页，获取可访问的全文，将相关内容复制到证据文件中，便于核对。</p></article>
+      <article><h3>代码与 Notebook 结果</h3><p>检查工作区数据、调整分析代码，通过已配置的 Jupyter kernel 执行，并在 Notebook 中查看代码和输出。</p></article>
+      <article><h3>小参数模型，本地推理</h3><p>通过 llama.cpp 连接支持工具调用的本地模型。本地推理无需按 token 支付云模型费用，硬件及所接服务仍有各自成本。</p></article>
+      <article><h3>技能、任务与历史恢复</h3><p>按需加载 Skills 工作流说明，跟踪任务依赖，恢复历史对话，并通过 MCP 连接检索服务。</p></article>
+    </div>
+  </section>
+  <section class="content evidence" id="evaluation">
+    <div><h2>查看评估依据。</h2><p class="intro">仓库提供了 ScholarQABench 中 20 个生物医学问题的评估，使用 Bonsai 2 27B 模型，对比 BioPaster 与 Claude Code。</p><p class="small">引用召回率与准确率衡量回答是否得到引用论文支持。这是特定小规模评估，不代表其他模型或科研任务的表现保证。</p><a href="https://github.com/N1yan/BioPaster#scholarqabench-biomedical-subset">查看评估与指标定义 ↗</a></div>
+    <figure><a href="../assets/benchmark.png"><img class="plot" src="../assets/benchmark.png" width="733" height="644" loading="lazy" alt="仓库评估图：BioPaster 与 Claude Code 在 20 个生物医学 ScholarQABench 问题上的引用召回率和准确率对比。"></a><figcaption>仓库公开的评估图，可点击查看完整尺寸。</figcaption></figure>
+  </section>
+  <section class="content start" id="start">
+    <div><h2>从自己的电脑开始。</h2><p class="intro">安装 BioPaster，启动支持工具调用的模型服务，再通过配置将两者连接。</p><p class="small">需要 Python 3.12 或以上版本。以下命令适用于 Linux Bash；模型的内存需求取决于规模、量化和上下文长度。</p><p><a href="https://github.com/N1yan/BioPaster/blob/main/docs/local-model.zh-CN.md">本地模型运行教程 ↗</a></p><p><a href="https://github.com/N1yan/BioPaster/blob/main/README.zh-CN.md">完整安装说明 ↗</a></p></div>
+    <div class="codebox"><div class="codebar"><span>安装命令行工具</span><button class="copy" data-copy="install-command" hidden aria-live="polite">复制</button></div><pre><code id="install-command">git clone https://github.com/N1yan/BioPaster.git
+cd BioPaster
+python3.12 -m venv .venv
+source .venv/bin/activate
+python -m pip install .
+biopaster --version</code></pre></div>
+  </section>
+  <section class="content" id="resources">
+    <h2>从配置到一个具体问题。</h2><p class="intro">阅读使用指南，或查看检索实例。从一个能够检查输出的小任务开始。</p>
+    <div class="resources">
+      <a class="resource" href="https://github.com/N1yan/BioPaster/blob/main/docs/local-model.zh-CN.md"><strong>本地模型指南 <span aria-hidden="true">↗</span></strong><p>下载模型、启动 llama.cpp，测试工具调用。</p></a>
+      <a class="resource" href="https://github.com/N1yan/BioPaster/blob/main/docs/model-selection.zh-CN.md"><strong>模型配置与选择 <span aria-hidden="true">↗</span></strong><p>配置服务连接，通过 /model 切换模型。</p></a>
+      <a class="resource" href="https://github.com/N1yan/BioPaster/blob/main/examples/chroma_mcp/README.zh-CN.md"><strong>Chroma 检索示例 <span aria-hidden="true">↗</span></strong><p>通过 MCP 连接文档检索服务。</p></a>
+      <a class="resource" href="https://github.com/N1yan/BioPaster/blob/main/examples/neo4j_mcp/README.zh-CN.md"><strong>Neo4j 知识图谱示例 <span aria-hidden="true">↗</span></strong><p>探索面向研究问题的图谱检索。</p></a>
+    </div>
+  </section>
+  <section class="content faq" id="faq">
+    <h2>开始前的几个问题。</h2>
+    <details><summary>BioPaster 是什么？</summary><p>BioPaster 是面向生物医学研究的开源命令行 AI Agent，将语言模型与文献、本地文件、代码执行和 Jupyter Notebook 连接起来。项目以 Python 编写，源码发布在 GitHub。</p></details>
+    <details><summary>能用本地小参数模型运行吗？</summary><p>可以。项目已使用本地 9B 模型测试流式输出、工具调用和会话标题生成。需要选择支持工具调用的模型，以及兼容 Anthropic Messages API 的服务。任务完成质量取决于模型能力和问题本身。</p></details>
+    <details><summary>本地推理意味着完全离线吗？</summary><p>模型可以在自己的电脑运行，无需云推理服务。但文献搜索、文件下载和外部 MCP 服务仍可能访问网络，取决于启用和调用的工具。</p></details>
+    <details><summary>分析完成后可以检查什么？</summary><p>可以检查 Notebook 中保留的代码与输出、来源证据文件和历史会话。复现还需要原始输入数据及兼容的软件环境，仅有 Notebook 不代表一定能够复现。</p></details>
+  </section>
+</main>
+<footer class="wrap"><span>BioPaster · MIT 许可证开源项目</span><div><a href="https://github.com/N1yan/BioPaster/issues">问题反馈</a><a href="https://github.com/N1yan/BioPaster/blob/main/LICENSE">许可证</a><a href="../" lang="en">English</a></div></footer>
+</body>
+</html>
